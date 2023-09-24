@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title> Yoe Yar-Login </title>
+        <!-- MDB icon -->
+        <link rel="icon" href="img/logo.png" type="image/x-icon" />
+        <!-- Font Awesome -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <!-- Google Fonts Roboto -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
+        <!-- MDB -->
+        <link rel="stylesheet" href="css/mdb.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom style.css">
+    </head>
+<body>
+
+  <div class="container">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+        <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+
+            <img src="img/logo.png" style="width: 200px; height:100px" >
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">                                
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+              Product Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="/productclothing.html">Clothing</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/productfood.html">Food</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/productjewellery.html">Jewellery</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/productcosmetics.html">Cosmetics</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/producttextiles.html">Textiles</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html"> Contact </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html"> About </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item me-3 me-lg-0">
+            <strong><a class="nav-link" href="/shoppingcart.html">
+              <i class="fas fa-shopping-cart"></i>
+            </a></strong>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#">
+              <i class="fas fa-heart"></i>
+            </a>
+          </li>
+          <!-- Icon dropdown -->
+          <li class="nav-item me-3 me-lg-0 dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="/login.html">Login</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="/signup.html">Register</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <br><br>
+    
+    <div class="container d-flex align-items-center justify-content-center mt-4">
+        <section class="h-100 h-custom">
+            <div class="container h-100 py-5">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+          
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="h5">Shopping Cart</th>
+                          <th scope="col">Categories</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <div class="d-flex align-items-center">
+                              <img src="img/c6.jpg" class="img-fluid rounded-3"
+                                style="width: 120px;" alt="Book">
+                              <div class="flex-column ms-4">
+                                <p class="mb-2">Echo Printing Cloak</p>
+                                <p class="mb-0">40000 MMK</p>
+                              </div>
+                            </div>
+                          </th>
+                          <td class="align-middle">
+                            <p class="mb-0" style="font-weight: 500;">Clothing</p>
+                          </td>
+                          <td class="align-middle">
+                            <div class="d-flex flex-row">
+                              <button class="btn btn-link px-2"
+                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                <i class="fas fa-minus"></i>
+                              </button>
+          
+                              <input id="form1" min="0" name="quantity" value="2" type="number"
+                                class="form-control form-control-sm" style="width: 50px;" />
+          
+                              <button class="btn btn-link px-2"
+                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                          </td>
+                          <td class="align-middle">
+                            <p class="mb-0" style="font-weight: 500;">80000 MMK</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="border-bottom-0">
+                            <div class="d-flex align-items-center">
+                              <img src="img/f3.jpg" class="img-fluid rounded-3"
+                                style="width: 120px;" alt="Book">
+                              <div class="flex-column ms-4">
+                                <p class="mb-2">Shwe Myin Pyan (Halawar)</p>
+                                <p class="mb-0">6500 MMK</p>
+                              </div>
+                            </div>
+                          </th>
+                          <td class="align-middle border-bottom-0">
+                            <p class="mb-0" style="font-weight: 500;">Food</p>
+                          </td>
+                          <td class="align-middle border-bottom-0">
+                            <div class="d-flex flex-row">
+                              <button class="btn btn-link px-2"
+                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                <i class="fas fa-minus"></i>
+                              </button>
+          
+                              <input id="form1" min="0" name="quantity" value="1" type="number"
+                                class="form-control form-control-sm" style="width: 50px;" />
+          
+                              <button class="btn btn-link px-2"
+                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                <i class="fas fa-plus"></i>
+                              </button>
+                            </div>
+                          </td>
+                          <td class="align-middle border-bottom-0">
+                            <p class="mb-0" style="font-weight: 500;">6500 MMK</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+          
+                  <div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
+                    <div class="card-body p-4">
+          
+                      <div class="row">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                          <form>
+                            <div class="d-flex flex-row pb-3">
+                              <div class="d-flex align-items-center pe-2">
+                                <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1v"
+                                  value="" aria-label="..." checked />
+                              </div>
+                              <div class="rounded border w-100 p-3">
+                                <p class="d-flex align-items-center mb-0">
+                                  <i class="fab fa-cc-mastercard fa-2x pe-2"></i>Credit
+                                  Card
+                                </p>
+                              </div>
+                            </div>
+                            <div class="d-flex flex-row pb-3">
+                              <div class="d-flex align-items-center pe-2">
+                                <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2v"
+                                  value="" aria-label="..." />
+                              </div>
+                              <div class="rounded border w-100 p-3">
+                                <p class="d-flex align-items-center mb-0">
+                                  <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>Debit Card
+                                </p>
+                              </div>
+                            </div>
+                            <div class="d-flex flex-row pb-3">
+                              <div class="d-flex align-items-center pe-2">
+                                <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3v"
+                                  value="" aria-label="..." />
+                              </div>
+                              <div class="rounded border w-100 p-3">
+                                <img class="w-25 h-auto img-fluid text-dark pe-2" src="https://play-lh.googleusercontent.com/rPq4GMCZy12WhwTlanEu7RzxihYCgYevQHVHLNha1VcY5SU1uLKHMd060b4VEV1r-OQ" alt="">WavePay
+                                </p>
+                              </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="d-flex align-items-center pe-2">
+                                  <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3v"
+                                    value="" aria-label="..." />
+                                </div>
+                                <div class="rounded border w-100 p-3">
+                                  <p class="d-flex align-items-center mb-0">
+                                    <img class="w-25 h-25 img-fluid text-dark pe-2" src="https://www.kbzpay.com/wp-content/uploads/sites/9/2020/04/blue-L.png" alt="">KBZPay
+                                  </p>
+                                </div>
+                              </div>
+                          </form>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-xl-6">
+                          <div class="row">
+                            <div class="col-12 col-xl-6">
+                              <div class="form-outline mb-4 mb-xl-5">
+                                <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                                  placeholder="John Smith" />
+                                <label class="form-label" for="typeName">Name on card</label>
+                              </div>
+          
+                              <div class="form-outline mb-4 mb-xl-5">
+                                <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YY"
+                                  size="7" id="exp" minlength="7" maxlength="7" />
+                                <label class="form-label" for="typeExp">Expiration</label>
+                              </div>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                              <div class="form-outline mb-4 mb-xl-5">
+                                <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                                  placeholder="1111 2222 3333 4444" minlength="19" maxlength="19" />
+                                <label class="form-label" for="typeText">Card Number</label>
+                              </div>
+          
+                              <div class="form-outline mb-4 mb-xl-5">
+                                <input type="password" id="typeText" class="form-control form-control-lg"
+                                  placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                                <label class="form-label" for="typeText">Cvv</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-xl-3">
+                          <div class="d-flex justify-content-between" style="font-weight: 500;">
+                            <p class="mb-2">Subtotal</p>
+                            <p class="mb-2">865,000 MMK</p>
+                          </div>
+          
+                          <div class="d-flex justify-content-between" style="font-weight: 500;">
+                            <p class="mb-0">Delivery Fees</p>
+                            <p class="mb-0">3000 MMK</p>
+                          </div>
+          
+                          <hr class="my-4">
+          
+                          <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                            <p class="mb-2">Total (tax included)</p>
+                            <p class="mb-2">868,000 MMK</p>
+                          </div>
+          
+                          <button type="button" class="btn btn-primary btn-block btn-lg">
+                            <div class="d-flex justify-content-between">
+                              <span>Checkout</span>
+                              <span>86,8000 MMK</span>
+                            </div>
+                          </button>
+          
+                        </div>
+                      </div>
+          
+                    </div>
+                  </div>
+          
+                </div>
+              </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start" style="background-color: #435668; color:#EDDD98;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="https://www.facebook.com" target="_blank" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.twitter.com" class="me-4 text-reset" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.google.com" class="me-4 text-reset" target="_blank">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="https://www.instagram.com" class="me-4 text-reset" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fa-solid fa-truck me-3"></i>Yoe Yar
+          </h6>
+          <p>
+            “Yoe Yar” is a distinguished company that curates and presents an exclusive collection of authentic Burmese Traditional Products.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="/productclothing.html" class="text-reset">Clothing</a>
+          </p>
+          <p>
+            <a href="/productfood.html" class="text-reset">Food</a>
+          </p>
+          <p>
+            <a href="/productjewellery.html" class="text-reset">Jewellery</a>
+          </p>
+          <p>
+            <a href="/productcosmetics.html" class="text-reset">Cosmetics</a>
+          </p>
+          <p>
+            <a href="/producttextiles.html" class="text-reset">Textiles</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="/index.html" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="/contact.html" class="text-reset">Contact</a>
+          </p>
+          <p>
+            <a href="/about.html" class="text-reset">About</a>
+          </p>
+          <p>
+            <a href="/shoppingcart.html" class="text-reset">Shopping Cart</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> No.3528, Mindama Road, Mayangone Township, Yangon</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            yoeyar@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 95 940 901 71</p>
+          <p><i class="fas fa-print me-3"></i> + 03 234 567</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">CybeRoot</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+</body>
+</html>
